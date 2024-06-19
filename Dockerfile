@@ -33,7 +33,7 @@ RUN a2ensite geteduroam
 
 RUN git clone https://github.com/geteduroam/letswifi-portal.git
 WORKDIR /letswifi-portal
-RUN composer install && make SIMPLESAMLPHP_VERSION=2.1.1 simplesamlphp
+RUN composer install && make SIMPLESAMLPHP_VERSION=2.2.2 simplesamlphp
 
 WORKDIR /var/www/
 RUN rm html/index.html && mv /letswifi-portal/www/* html/ && rm -r /letswifi-portal/www/ && mv /letswifi-portal/* . && rm -r /letswifi-portal
