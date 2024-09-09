@@ -1,15 +1,12 @@
-diff --git a/Dockerfile b/Dockerfile
-index e764fdf..f502964 100644
---- a/Dockerfile
-+++ b/Dockerfile
-@@ -32,7 +32,10 @@ COPY geteduroam.conf /etc/apache2/sites-available/geteduroam.conf
- RUN a2ensite geteduroam
- 
- RUN git clone https://github.com/geteduroam/letswifi-portal.git
-+COPY enable-sunet-css.patch /letswifi-portal
-+COPY sunet.css /letswifi-portal/www/assets/
- WORKDIR /letswifi-portal
-+RUN git apply enable-sunet-css.patch
- RUN composer install && make SIMPLESAMLPHP_VERSION=2.2.2 simplesamlphp
- 
- WORKDIR /var/www/
+diff --git a/tpl/base.html b/tpl/base.html
+index a7b6496..6a046f6 100644
+--- a/tpl/base.html
++++ b/tpl/base.html
+@@ -1,6 +1,7 @@
+ <!DOCTYPE html>
+ <html lang="en" class="{% block documentClass %}{% endblock %}">
+ <link rel="stylesheet" href="{{ _basePath }}/assets/geteduroam.css">
++<link rel="stylesheet" href="{{ _basePath }}/assets/sunet.css">
+ <link rel="icon" href="{{ _basePath }}/assets/geteduroam.ico" type="image/x-icon">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ {% if meta_redirect %}
