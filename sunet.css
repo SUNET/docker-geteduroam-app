@@ -1,1 +1,177 @@
-/* Placeholder */
+/* Style adaptations for alignment with Sunet.se branding, based on current css and html structure of geteduroam.com. 
+Note: should it change, the following overriding css might need adjusting as well.
+Color contrasts passing at WCAG AA level.
+ */
+
+/* Responsive - mobile first */
+html {
+  background: #f4f4f4;
+  color: #161616;
+}
+
+body {
+  position: relative;
+}
+body:before {
+  height: 2.5em;
+  max-height: 2.5em;
+  margin: 0;
+  background-size: contain, 2.5em;
+  background-image: url(eduroam.svg), url(https://static.sunet.se/images/sunet_symbol_color.png);
+  background-position: calc(100% - 3.75em) 100%, 100% 0;
+  position: absolute;
+}
+
+nav {
+  margin: 0.75em auto 0.75em 0;
+}
+nav ul {
+  padding: 0;
+}
+nav li {
+  padding: 0;
+  margin: 0 1em 0 0;
+}
+nav li a:hover {
+  cursor: pointer;
+  color: #c63f2a;
+}
+nav li a,
+nav li a:visited {
+  font-size: 1.25em;
+  color: #161616;
+  border: none !important;
+  padding: 0 !important;
+  font-weight: 500;
+}
+nav li.active a,
+nav li a:active {
+  background: none;
+  color: #c63f2a;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+main {
+  min-height: auto;
+  padding: 1.5em 1em 4em;
+  border-width: 8px;
+  border-color: #c63f2a;
+  border-radius: 0 0 10px 10px;
+}
+main:after {
+  background-image: url(https://geteduroam.se/assets/eduroam.svg);
+  background-repeat: no-repeat;
+  background-position: 95% 0%;
+  background-size: 1350px;
+  content: "";
+  display: block;
+  height: 12em;
+  margin: -8em -1em -4em;
+}
+
+h1 small {
+  color: #6d7074;
+}
+
+.btn {
+  padding: 8px 18px;
+  margin: 0 10px 10px 0;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.btn.btn-default {
+  background: #004869;
+  transition: opacity 1s ease 0s;
+}
+.btn.btn-default:hover {
+  opacity: 0.7;
+}
+
+hr {
+  border-color: #d8d8d8;
+  position: relative;
+  z-index: 2;
+}
+
+/* Responsive - wider */
+@media (min-width: 800px) {
+  html {
+    padding: 0 1em 1em;
+  }
+
+  body {
+    max-width: 57em;
+    grid-template-columns: 1fr;
+  }
+  body:before {
+    height: 3em;
+    max-height: 3em;
+    background-size: contain, 3em;
+    margin: 1em 0 0;
+    background-position: calc(100% - 4.75em) 100%, 100% 0;
+  }
+
+  nav {
+    margin: 2em auto 0.75em 0;
+  }
+  nav li {
+    display: inline-block;
+  }
+
+  main {
+    padding: 2em 2em 4em;
+  }
+  main::after {
+    margin: -8em -2em -4em;
+  }
+
+  main h1:first-child {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+  }
+  h1 small {
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  .apps {
+    text-align: left;
+    text-align-last: left;
+  }
+}
+
+/* Dark mode overrides */
+@media (prefers-color-scheme: dark) {
+  html {
+    background: #000;
+  }
+
+  body:before {
+    background-image: url(eduroam-dark.svg), url(https://static.sunet.se/images/sunet_symbol_color.png);
+  }
+
+  nav li.active a,
+  nav li a:active {
+    background: none;
+    color: #d2432d;
+  }
+
+  main {
+    border-color: #d2432d;
+  }
+  main:after {
+    background-image: url(https://geteduroam.se/assets/eduroam-dark.svg);
+  }
+
+  h1 small {
+    color: #898b90;
+  }
+  .btn.btn-default {
+    background: #004869;
+  }
+}
