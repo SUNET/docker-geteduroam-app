@@ -24,6 +24,7 @@ body:before {
 
 nav {
   margin: 0.75em auto 0.75em 0;
+  position: relative;
 }
 nav ul {
   padding: 0;
@@ -31,10 +32,6 @@ nav ul {
 nav li {
   padding: 0;
   margin: 0 1em 0 0;
-}
-nav li a:hover {
-  cursor: pointer;
-  color: #c63f2a;
 }
 nav li a,
 nav li a:visited {
@@ -50,6 +47,11 @@ nav li a:active {
   color: #c63f2a;
   text-decoration: underline;
   text-underline-offset: 4px;
+}
+nav li a:hover {
+  cursor: pointer;
+  color: #c63f2a !important;
+  background: none;
 }
 
 main {
@@ -72,6 +74,7 @@ main:after {
 
 h1 small {
   color: #6d7074;
+  line-height: 1.4;
 }
 
 .btn {
@@ -83,10 +86,10 @@ h1 small {
 }
 .btn.btn-default {
   background: #004869;
-  transition: opacity 1s ease 0s;
+  transition: filter 0.2s ease 0s;
 }
 .btn.btn-default:hover {
-  opacity: 0.7;
+  filter: brightness(1.5);
 }
 
 hr {
@@ -155,9 +158,12 @@ hr {
     background-image: url(eduroam-dark.svg), url(https://static.sunet.se/images/sunet_symbol_color.png);
   }
 
+  nav li a,
+  nav li a:visited {
+    color: #f5f4f2;
+  }
   nav li.active a,
   nav li a:active {
-    background: none;
     color: #d2432d;
   }
 
