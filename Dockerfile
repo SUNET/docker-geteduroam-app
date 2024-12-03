@@ -36,7 +36,7 @@ COPY enable-sunet-css.patch /letswifi-portal
 COPY sunet.css /letswifi-portal/www/assets/
 WORKDIR /letswifi-portal
 RUN git apply enable-sunet-css.patch
-RUN composer install && make SIMPLESAMLPHP_VERSION=2.2.2 simplesamlphp
+RUN composer install && make SIMPLESAMLPHP_VERSION=2.3.5 simplesamlphp
 
 WORKDIR /var/www/
 RUN rm html/index.html && mv /letswifi-portal/www/* html/ && rm -r /letswifi-portal/www/ && mv /letswifi-portal/* . && rm -r /letswifi-portal
