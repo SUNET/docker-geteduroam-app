@@ -32,7 +32,7 @@ COPY geteduroam.conf /etc/apache2/sites-available/geteduroam.conf
 RUN a2ensite geteduroam
 
 RUN git clone https://github.com/geteduroam/letswifi-portal.git
-COPY *.patch /letswifi-portal
+COPY *.patch /letswifi-portal/
 COPY sunet.css /letswifi-portal/www/assets/
 WORKDIR /letswifi-portal
 RUN git checkout 661792f9558119bdb87a981bc31478b03a841048
