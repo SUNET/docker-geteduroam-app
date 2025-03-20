@@ -32,9 +32,10 @@ COPY geteduroam.conf /etc/apache2/sites-available/geteduroam.conf
 RUN a2ensite geteduroam
 
 RUN git clone https://github.com/geteduroam/letswifi-portal.git
-COPY enable-sunet-css.patch /letswifi-portal
-COPY sunet.css /letswifi-portal/www/assets/
 WORKDIR /letswifi-portal
+RUN git checkout 661792f9558119bdb87a981bc31478b03a841048
+COPY ../enable-sunet-css.patch enable-sunet-css.patch
+COPY ../sunet.css /www/assets/
 RUN git apply enable-sunet-css.patch
 RUN composer install && make SIMPLESAMLPHP_VERSION=2.3.5 simplesamlphp
 
