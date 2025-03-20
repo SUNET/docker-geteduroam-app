@@ -38,7 +38,7 @@ COPY sunet.css /letswifi-portal/www/assets/
 WORKDIR /letswifi-portal
 RUN git checkout 661792f9558119bdb87a981bc31478b03a841048
 RUN git apply *.patch
-RUN composer install && make SIMPLESAMLPHP_VERSION=2.3.5 simplesamlphp
+RUN composer install && make SIMPLESAMLPHP_VERSION=2.3.7 simplesamlphp
 
 WORKDIR /var/www/
 RUN rm html/index.html && mv /letswifi-portal/www/* html/ && rm -r /letswifi-portal/www/ && mv /letswifi-portal/* . && rm -r /letswifi-portal
