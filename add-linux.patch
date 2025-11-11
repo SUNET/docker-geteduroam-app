@@ -1,0 +1,15 @@
+diff --git a/www/app/index.php b/www/app/index.php
+index c28177e..d94274d 100644
+--- a/www/app/index.php
++++ b/www/app/index.php
+@@ -33,6 +33,10 @@ $app->render( [
+ 			'url' => 'https://appgallery.huawei.com/app/C104231893',
+ 			'name' => 'Huawei',
+ 		],
++		'linux' => [
++			'url' => 'https://github.com/geteduroam/linux-app/releases',
++			'name' => 'Linux',
++		],
+ 	],
+ 	'os_config' => [
+ 		'mobileconfig' => [
