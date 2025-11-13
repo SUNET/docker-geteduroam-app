@@ -1,0 +1,35 @@
+diff --git a/www/app/index.php b/www/app/index.php
+index c28177e..df50432 100644
+--- a/www/app/index.php
++++ b/www/app/index.php
+@@ -23,7 +23,7 @@ $app->render( [
+ 		],
+ 		'ios' => [
+ 			'url' => 'https://apps.apple.com/app/geteduroam/id1504076137',
+-			'name' => 'iOS',
++			'name' => 'iPhone/iPad (iOS)',
+ 		],
+ 		'windows' => [
+ 			'url' => 'https://dl.eduroam.app/windows/x86_64/geteduroam.exe',
+@@ -33,15 +33,19 @@ $app->render( [
+ 			'url' => 'https://appgallery.huawei.com/app/C104231893',
+ 			'name' => 'Huawei',
+ 		],
++		'linux' => [
++			'url' => 'https://github.com/geteduroam/linux-app/releases',
++			'name' => 'Linux',
++		],
+ 	],
+ 	'os_config' => [
+ 		'mobileconfig' => [
+ 			'url' => "${basePath}/profiles/mac/",
+-			'name' => 'macOS',
++			'name' => 'macOS (computer)',
+ 		],
+ 		'onc' => [
+ 			'url' => "${basePath}/profiles/onc/",
+-			'name' => 'ChromeOS',
++			'name' => 'Chromebook',
+ 		],
+ 	],
+ 	'manual' => [
