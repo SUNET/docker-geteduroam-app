@@ -1,8 +1,8 @@
 diff --git a/tpl/profile-download.html b/tpl/profile-download.html
-index 3422883..6200660 100644
+index 3422883..affd5f9 100644
 --- a/tpl/profile-download.html
 +++ b/tpl/profile-download.html
-@@ -21,11 +21,11 @@
+@@ -21,13 +21,14 @@
  {% endif %}
  
  {% if device == 'apple-mobileconfig' %}
@@ -16,4 +16,7 @@ index 3422883..6200660 100644
 +	<img src="{{ _basePath }}/assets/mac/sequoia.png">
  </picture>
  </p>
++<p>Due to a <strong>bug in MacOS</strong> it sometimes takes multiple attempts to install the profile. If you can't access eduroam after the first try, give it another shot.</p>
  {% endif %}
+ 
+ {% if device == 'google-onc' %}
