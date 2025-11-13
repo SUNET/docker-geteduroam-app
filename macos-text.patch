@@ -1,0 +1,12 @@
+diff --git a/tpl/profile-download.html b/tpl/profile-download.html
+index 3422883..f4a1148 100644
+--- a/tpl/profile-download.html
++++ b/tpl/profile-download.html
+@@ -28,6 +28,7 @@
+ 	<img src="{{ _basePath }}/assets/mac/sonoma.png">
+ </picture>
+ </p>
++<p>Due to a <strong>bug in MacOS</strong> it sometimes takes multiple attempts to install the profile. If you can't access eduroam after the first try, give it another shot.</p>
+ {% endif %}
+ 
+ {% if device == 'google-onc' %}
