@@ -1,5 +1,5 @@
 diff --git a/www/app/index.php b/www/app/index.php
-index c28177e..df50432 100644
+index c28177e..e34e62e 100644
 --- a/www/app/index.php
 +++ b/www/app/index.php
 @@ -23,7 +23,7 @@ $app->render( [
@@ -29,7 +29,7 @@ index c28177e..df50432 100644
  		'onc' => [
  			'url' => "${basePath}/profiles/onc/",
 -			'name' => 'ChromeOS',
-+			'name' => 'Chromebook',
++			'name' => 'Chromebook (the computer, not the browser)',
  		],
  	],
  	'manual' => [
