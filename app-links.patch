@@ -29,7 +29,7 @@ index c28177e..e34e62e 100644
  		'onc' => [
  			'url' => "${basePath}/profiles/onc/",
 -			'name' => 'ChromeOS',
-+			'name' => 'Chromebook (the computer, not the browser)',
++			'name' => 'Chromebook (computer, not the browser)',
  		],
  	],
  	'manual' => [
